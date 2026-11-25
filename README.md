@@ -18,9 +18,10 @@ roasting your own AI agent. Built for [make.fun](https://make.fun) — referral 
 
 ## How it works
 
-`main.py` (Python 3 standard library only) writes the roast line to
-`/output/entry.txt` with plain `open()` and an explicit `chmod 644`,
-so the grader can read it.
+`main.py` (Python 3 standard library only) validates the roast line —
+strips surrounding whitespace, rejects empty or multi-line text, caps
+it at 200 characters — then writes it to `/output/entry.txt` with
+plain `open()` and an explicit `chmod 644`, so the grader can read it.
 
 ## Run
 
